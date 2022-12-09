@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .banner {
+        display: block;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .row {
+        height: 100vh;
+        align-items: center;
+        display: flex;
+    }
+
+    .col {
+        width: 100%;
+        margin: 15px;
+        padding: 15px;
+        position: relative;
+    }
+
+    .img_scr {
+        width: 70px;
+        animation: clip 2s 7.5s forwards;
+        transform: translateX(-800px);
+    }
+
+    @keyframes clip {
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .img_clip {
+        width: 70px;
+        height: 70px;
+        transform: translateX(-300px);
+        transform: scale(0);
+        animation: img_clip 2s 8s infinite alternate linear;
+    }
+
+    @keyframes img_clip {
+        0% {
+            transform: translateX(0);
+            transform: translateY(-30px);
+        }
+
+        100% {
+            transform: scale(1);
+            transform: translateX(20px);
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .img_code {
+        width: 70px;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        animation: img_code 7s infinite linear;
+    }
+
+    @keyframes img_code {
+        0% {
+            right: 15%;
+            z-index: -1;
+            transform: scale(1);
+        }
+
+        25% {
+            right: 50%;
+            transform: scale(0.2);
+        }
+
+        50% {
+            right: 75%;
+            transform: scale(0.3);
+        }
+
+        75% {
+            right: 100%;
+            transform: scale(1);
+        }
+
+        100% {
+            right: 15%;
+            transform: scale(1);
+            z-index: 2;
+        }
+    }
+
+    h1 {
+        font-size: 75px;
+    }
+
+    .header {
+        transform: translateY(800px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .f {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 2s;
+    }
+
+    @keyframes heading {
+        50% {
+            transform: translateY(30px);
+        }
+
+        75% {
+            transform: translateY(-15px);
+            color: rgb(28, 98, 128);
+        }
+
+        100% {
+            color: rgb(28, 98, 128);
+            transform: translateY(0);
+        }
+    }
+
+    .i {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 3s;
+    }
+
+    .r {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 4s;
+    }
+
+    .s {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 5s;
+    }
+
+    .t {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 6s;
+    }
+
+    .c {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 7s;
+    }
+
+    .o {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 8s;
+    }
+
+    .d {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 9s;
+    }
+
+    .e {
+        display: inline-block;
+        animation-name: heading;
+        animation-fill-mode: forwards;
+        transform: translateY(-400px);
+        animation-duration: 10s;
+    }
+
+    p {
+        animation: description 2s forwards;
+        transform: translateX(-800px);
+        color: gray;
+    }
+
+    @keyframes description {
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .casual {
+        animation: casual 2s 500ms forwards;
+        transform: scale(0);
+    }
+
+    @keyframes casual {
+        75 {
+            transform: scale(0.8);
+        }
+
+        100% {
+            transform: scale(100%)
+        }
+    }
+
+    button {
+        margin: 30px;
+        width: 300px;
+        height: 80px;
+        background-image: linear-gradient(90deg, blue, pink);
+        border-radius: 45px;
+        border: none;
+        animation: button 2s 1s forwards;
+        transform: translateY(400px);
+        visibility: hidden;
+    }
+
+    @keyframes button {
+        100% {
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    .button {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 25px;
+        letter-spacing: 5px;
+        animation: button_class 4s infinite;
+    }
+
+    @keyframes button_class {
+        0% {
+            transform: rotate(0) translateY(0);
+        }
+
+        25% {
+            transform: rotate(0deg) translateY(0px);
+        }
+
+        50% {
+            transform: rotate(7deg) translateY(10px);
+        }
+
+        75% {
+            transform: rotate(-5deg) translateY(10px);
+        }
+
+        100% {
+            transform: rotate(0) translateY(00px);
+        }
+    }
+</style>
+
+<body>
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="img_scr"><img class="img_clip" src="img/Clip_perspective_matte.png">
+                    </div>
+                    <h1>
+                        <span class="header f">F</span>
+                        <span class="header i">i</span>
+                        <span class="header r">r</span>
+                        <span class="header s">s</span>
+                        <span class="header t">t</span>
+                        <span class="header c">C</span>
+                        <span class="header o">o</span>
+                        <span class="header d">d</span>
+                        <span class="header e">e</span>
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sint
+                        expedita voluptatum
+                        nemo, suscipit ut magnam error, nisi ipsum qui dolorem odio voluptas veniam. Tenetur
+                        asperiores
+                        recusandae doloribus iste laboriosam? Perferendis a rerum repellendus qui soluta
+                        culpa ullam, libero
+                        adipisci aliquam similique officia accusantium, ab dolor, reprehenderit dolore iusto
+                        non!</p>
+                    <div class="button"><button><a href class="button">Learn more</a></button></div>
+                </div>
+                <div class="col">
+                    <div class="img_code">
+                        <img src="img/Code_perspective_matte_s.png" alt>
+                    </div>
+                    <img class="casual" src="img/casual-life-3d-reading.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
